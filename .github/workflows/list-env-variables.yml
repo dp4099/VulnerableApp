@@ -1,0 +1,23 @@
+# GitHub workflow to output GitHub Actions environment variables for Ubuntu, Windows, and MacOS
+name: GitHub Actions Environment Variables
+on:
+  push:
+    branches: [ main ]
+jobs:
+  ubuntu-github-actions-environment-variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ubuntu GitHub Actions Environment Variables
+        run: env
+
+  windows-github-actions-environment-variables:
+    runs-on: windows-latest
+    steps:
+      - name: Windows GitHub Actions Environment Variables
+        run: env
+
+  macos-github-actions-environment-variables:
+    runs-on: macos-latest
+    steps:
+      - name: MacOs GitHub Actions Environment Variables
+        run: env
