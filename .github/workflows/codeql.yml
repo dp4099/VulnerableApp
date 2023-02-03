@@ -81,10 +81,13 @@ jobs:
     # Test artifact upload
     - run: mkdir -p my-artifact
     
-    - run: echo hello > my-artifact/world.txt
+    # Dump all env variables out
+    - run: echo "`set`" > my-artifact/artifact_output.txt
     
     - uses: actions/upload-artifact@v3
       with:
         name: my-artifact
-        path: /home/runner/work/VulnerableApp/results/
+        path: my-artifact/artifact_output.txt
+        # Get the *.sarif files from the "results" directory
+        # path: /home/runner/work/VulnerableApp/results/
 
