@@ -86,5 +86,5 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: my-artifact
-        path: my-artifact/world.txt
+        path: /home/runner/work/_temp/codeql_databases/
 
