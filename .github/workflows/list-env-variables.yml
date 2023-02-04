@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Windows GitHub Actions Environment Variables
-        run: env | sort -f
+        run: env | sort
 
   macos-github-actions-environment-variables:
     runs-on: macos-latest
