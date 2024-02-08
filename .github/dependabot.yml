@@ -5,9 +5,14 @@
 
 version: 2
 updates:
-  # Enable version updates for npm
-  - package-ecosystem: "npm" # See documentation for possible values
-    # Look for `package.json` and `lock` files in the `root` directory
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    rebase-strategy: "disabled"
+
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    rebase-strategy: "disabled"
